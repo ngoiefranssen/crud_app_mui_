@@ -1,19 +1,22 @@
-import { AppBar, styled, Toolbar, Typography } from '@mui/material'
+import { AppBar, styled, Toolbar } from '@mui/material'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const typText = styled(Typography)`
+const Nav = styled(NavLink)`
     font-size : 20px;
     margin-right : 20px;
+    color : inherit;
+    text-decoration : currentColor;
+    text : center;
 `
 
 const Header = () => {
   return (
     <AppBar sx={{ backgroundColor: '#3D1766',  position:'static' }}>
-        <Toolbar>
-            <NavLink to=''>CdIntervieuw</NavLink>
-            <NavLink to='/allusers'>AllUsers</NavLink>
-            <NavLink to='/adduser'>Add new</NavLink>
+        <Toolbar sx={{ textAlign: 'center' }}>
+            <Nav to='/'>CdIntervieuw</Nav>
+            <Nav to='/allusers'>AllUsers</Nav>
+            <Nav to='/adduser'>Add new</Nav>
         </Toolbar>
     </AppBar>
   )
