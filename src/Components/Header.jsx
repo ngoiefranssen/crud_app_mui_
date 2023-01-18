@@ -2,7 +2,7 @@ import { AppBar, styled, Toolbar, Typography } from '@mui/material'
 import React from 'react'
 
 const typText = styled(Typography)`
-    
+    font-size:
 `
 
 const Header = () => {
