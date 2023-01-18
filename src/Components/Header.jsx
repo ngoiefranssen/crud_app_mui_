@@ -3,7 +3,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const typText = styled(Typography)`
-    font-size:
+    font-size : 20px;
+    margin-right : 20px;
 `
 
 const Header = () => {
