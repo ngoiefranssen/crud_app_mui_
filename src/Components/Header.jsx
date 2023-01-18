@@ -15,7 +15,7 @@ const Header = () => {
     <AppBar sx={{ backgroundColor: '#3D1766',  position:'static' }}>
         <Toolbar sx={{ textAlign: 'center' }}>
             <Nav to='/'>CdIntervieuw</Nav>
-            <Nav to='/allusers'>AllUsers</Nav>
+            <Nav to='/allusers'>All Users</Nav>
             <Nav to='/adduser'>Add new</Nav>
         </Toolbar>
     </AppBar>
