@@ -62,7 +62,7 @@ const AddUser = () => {
           <TextField
               id="outlined-password-input"
               name='phone'
-              label="Mobile"
+              label="Phone"
               // type="text"
               // autoComplete="current-password"
               onChange = { (e) => handleValueChange(e) }
