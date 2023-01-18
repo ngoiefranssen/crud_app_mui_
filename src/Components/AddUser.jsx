@@ -1,4 +1,11 @@
-import { Button, FormControl, FormGroup, styled, TextField } from '@mui/material'
+import { 
+  Button,
+  FormControl,
+  FormGroup,
+  Input,
+  InputLabel,
+  styled
+} from '@mui/material'
 import ApiAddUser from '../Api/ApiAddUser'
 import React from 'react'
 
@@ -29,44 +36,32 @@ const AddUser = () => {
   return (
       <FormStyledContainer>
         <FormControl>
-          <TextField
-            id="outlined-password-input"
+          <InputLabel>Name</InputLabel>
+          <Input
             name='name'
-            label="Name"
-            // type="text"
             onChange = { (e) => handleValueChange(e) }
-            // autoComplete="current-password"
           />
         </FormControl>
         <FormControl>
-          <TextField
-              id="outlined-password-input"
+          <InputLabel>Username</InputLabel>
+            <Input
               name='username'
-              label="Username"
-              // type="text"
-              // autoComplete="current-password"
               onChange = { (e) => handleValueChange(e) }
-            />
+          />
         </FormControl>
         <FormControl>
-          <TextField
-              id="outlined-password-input"
+          <InputLabel>Email</InputLabel>
+            <Input
               name='email'
-              label="Email"
-              // type="email"
-              // autoComplete="current-password"
               onChange = { (e) => handleValueChange(e) }
-            />
+          />
         </FormControl>
         <FormControl>
-          <TextField
-              id="outlined-password-input"
+          <InputLabel>Phone</InputLabel>
+            <Input
               name='phone'
-              label="Phone"
-              // type="text"
-              // autoComplete="current-password"
               onChange = { (e) => handleValueChange(e) }
-            />
+          />
         </FormControl>
         <FormControl>
           <Button
