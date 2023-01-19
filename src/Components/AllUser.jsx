@@ -89,7 +89,7 @@ const AllUser = () => {
                 <TableCell>
                   <Button
                   // sx={{ marginRight: 10 }}
-                    LinkComponent={Link}
+                    component={Link}
                     to={`/edituser/${user.id}`}
                   >
                       <EditIcon/>

@@ -8,6 +8,7 @@ import {
   import getUser from '../Api/getUser'
   import React from 'react'
   import { useNavigate, useParams } from 'react-router-dom';
+import ApiAddUser from '../Api/ApiAddUser';
   
   const FormStyledContainer = styled(FormGroup)`
     width : 50%;
@@ -30,16 +31,16 @@ import {
     const { id } = useParams()
     const handleValueChange = (e) => {
       setUser({ ...user, [e.target.name] : e.target.value})
-      console.log(user)
+      // console.log(user)
     }
 
     React.useEffect(() =>{
         getDataUser();
     },[])
 
-    const getDataUser = async (id) =>{
-        var res = await getUser(id)
-        console.log(res)
+    const getDataUser = async () =>{
+        var response = await getUser(id)
+        setUser(response.data)
     }
   
     const handleValueOnClick = async () => {
@@ -55,6 +56,7 @@ import {
               label="Name"
               name='name'
               variant="standard"
+              value={user.name}
               onChange = { (e) => handleValueChange(e) }
             />
           </FormControl>
@@ -64,6 +66,7 @@ import {
               label="Username"
               name='username'
               variant="standard"
+              value={user.username}
               onChange = { (e) => handleValueChange(e) }
             />
           </FormControl>
@@ -73,6 +76,7 @@ import {
               label="Email"
               name='email'
               variant="standard"
+              value={user.email}
               onChange = { (e) => handleValueChange(e) }
             />    
           </FormControl>
@@ -82,6 +86,7 @@ import {
               label="Phone"
               name='phone'
               variant="standard"
+              value={user.phone}
               onChange = { (e) => handleValueChange(e) }
             />
           </FormControl>
