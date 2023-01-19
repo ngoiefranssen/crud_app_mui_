@@ -5,9 +5,10 @@ import {
     styled,
     TextField
   } from '@mui/material'
-  import getUser from '../Api/getUser'
-  import React from 'react'
-  import { useNavigate, useParams } from 'react-router-dom';
+import GetUser from '../Api/GetUser'
+import editUser from '../Api/editUser'
+import React from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 import ApiAddUser from '../Api/ApiAddUser';
   
   const FormStyledContainer = styled(FormGroup)`
@@ -25,12 +26,13 @@ import ApiAddUser from '../Api/ApiAddUser';
   };
   
   const EditUser = () => {
-  
+
     const [user, setUser] = React.useState(initialValues)
     const navigate = useNavigate()
     const { id } = useParams()
+
     const handleValueChange = (e) => {
-      setUser({ ...user, [e.target.name] : e.target.value})
+      setUser({ ...user, [e.target.name] : e.target.value })
       // console.log(user)
     }
 
@@ -39,12 +41,12 @@ import ApiAddUser from '../Api/ApiAddUser';
     },[])
 
     const getDataUser = async () =>{
-        var response = await getUser(id)
-        setUser(response.data)
+      let response = await GetUser(id)
+      setUser(response.data)
     }
   
     const handleValueOnClick = async () => {
-      await ApiAddUser(user)
+      await editUser(user, id)
       navigate('/allusers')
     }
   
@@ -95,7 +97,7 @@ import ApiAddUser from '../Api/ApiAddUser';
               variant='contained'
               onClick={ () => handleValueOnClick() }
             >
-              Register
+              Edit
             </Button>
           </FormControl>
       </FormStyledContainer>

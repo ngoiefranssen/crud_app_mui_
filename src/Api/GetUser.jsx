@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const API_KEY = 'http://localhost:4000/users';
-const getUser = async (data) => {
+const GetUser = async (data) => {
     try {
         return await axios.get(`${API_KEY}/${data}`);
     } catch (error) {
@@ -9,4 +9,4 @@ const getUser = async (data) => {
     }
 }
 
-export default getUser
+export default GetUser

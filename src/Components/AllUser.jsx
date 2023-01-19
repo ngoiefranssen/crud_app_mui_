@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Paper,
   styled,
   Table,
   TableBody,
@@ -15,6 +14,7 @@ import { Link } from 'react-router-dom'
 import EditIcon from '@mui/icons-material/Edit'
 import RemoveIcon from '@mui/icons-material/Remove'
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import deleteUser from '../Api/deleteUser'
 
 const useStyledTable = styled(Table)`
   width : 50%;
@@ -52,6 +52,12 @@ const AllUser = () => {
     let res = await ApiGetUsers();
     setUsers(res.data);
   }
+
+  const handleValueDeleteData = async (id) => {
+   await deleteUser(id)
+   getUserFetch();
+  }
+
   return (
     <Box sx={{ width: '57%', margin : '50px auto 0 auto' }}>
       <Link 
@@ -81,7 +87,7 @@ const AllUser = () => {
           {
             users?.map((user) =>(
               <TableRow>
-                <TableCell align="left">{user.id}</TableCell>
+                <TableCell align="left" key={user.id}>{user.id}</TableCell>
                 <TableCell align="left">{user.name}</TableCell>
                 <TableCell align="left">{user.username}</TableCell>
                 <TableCell align="left">{user.email}</TableCell>
@@ -94,12 +100,15 @@ const AllUser = () => {
                   >
                       <EditIcon/>
                   </Button>
-                  <Button 
-
+                  <Button
                   >
                     <RemoveRedEyeIcon />
                   </Button>
-                  <Button variant='contained' color='error'><RemoveIcon/></Button>
+                  <Button
+                    variant='contained'
+                    color='error'
+                    onClick={ () => handleValueDeleteData(user.id) }
+                  ><RemoveIcon/></Button>
                 </TableCell>
               </TableRow>
             ))

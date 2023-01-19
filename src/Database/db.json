@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "Julia Sharma",
+      "name": "Sharma",
       "username": "Julianno",
-      "email": "julia@gmail.com",
+      "email": "Sharma@gmail.com",
       "phone": "758720171",
       "id": 1
     },
@@ -24,30 +24,9 @@
     {
       "name": "belcas ntas",
       "username": "jusjullis",
-      "email": "jusjullis@gmail.com",
+      "email": "cassandra@gmail.com",
       "phone": "927965821",
       "id": 4
-    },
-    {
-      "name": "belcas ntas",
-      "username": "jusjullis",
-      "email": "jusjullis@gmail.com",
-      "phone": "927965821",
-      "id": 5
-    },
-    {
-      "name": "jeieiei",
-      "username": "nfoiefeoi",
-      "email": " oieioe@gmail.com",
-      "phone": "125989655",
-      "id": 6
-    },
-    {
-      "name": "balfo",
-      "username": "jsulinions",
-      "email": "jsulinions@gmail.com",
-      "phone": "2356698557",
-      "id": 7
     }
   ]
 }
