@@ -1,11 +1,53 @@
 {
-    "users": [
-        {
-            "name": "Julia Sharma",
-            "username": "Julianno",
-            "email": "julia@gmail.com",
-            "phone": "243975872017",
-            "id": 1
-        }
-    ]
+  "users": [
+    {
+      "name": "Julia Sharma",
+      "username": "Julianno",
+      "email": "julia@gmail.com",
+      "phone": "758720171",
+      "id": 1
+    },
+    {
+      "name": "Ngoie",
+      "username": "Franssen",
+      "email": "ngoie@gmail.com",
+      "phone": "859987555",
+      "id": 2
+    },
+    {
+      "name": "belcas ntas",
+      "username": "jusjullis",
+      "email": "jusjullis@gmail.com",
+      "phone": "927965821",
+      "id": 3
+    },
+    {
+      "name": "belcas ntas",
+      "username": "jusjullis",
+      "email": "jusjullis@gmail.com",
+      "phone": "927965821",
+      "id": 4
+    },
+    {
+      "name": "belcas ntas",
+      "username": "jusjullis",
+      "email": "jusjullis@gmail.com",
+      "phone": "927965821",
+      "id": 5
+    },
+    {
+      "name": "jeieiei",
+      "username": "nfoiefeoi",
+      "email": " oieioe@gmail.com",
+      "phone": "125989655",
+      "id": 6
+    },
+    {
+      "name": "balfo",
+      "username": "jsulinions",
+      "email": "jsulinions@gmail.com",
+      "phone": "2356698557",
+      "id": 7
+    }
+  ]
 }

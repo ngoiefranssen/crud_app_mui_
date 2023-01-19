@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_KEY = 'http://localhost:2023/users'
+const API_KEY = 'http://localhost:4000/users';
 const ApiAddUser = async (data) => {
     try {
         return await axios.post(API_KEY, data)

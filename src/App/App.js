@@ -4,6 +4,7 @@ import CdIntervieuw from '../Components/CdIntervieuw'
 import AllUser from '../Components/AllUser'
 import AddUser from '../Components/AddUser'
 import './App.css';
+import EditUser from '../Components/EditUser';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route path='/' element={<CdIntervieuw />} />
         <Route path='/allusers' element={<AllUser />} />
         <Route path='/adduser' element={<AddUser />} />
+        <Route path='/edituser/:id' element={<EditUser />} />
       </Routes>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 

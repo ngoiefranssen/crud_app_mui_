@@ -16,7 +16,6 @@ const Header = () => {
         <Toolbar sx={{ textAlign: 'center' }}>
             <Nav to='/'>CdIntervieuw</Nav>
             <Nav to='/allusers'>All Users</Nav>
-            <Nav to='/adduser'>Add new</Nav>
         </Toolbar>
     </AppBar>
   )

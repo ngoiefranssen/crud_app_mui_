@@ -2,12 +2,12 @@ import {
   Button,
   FormControl,
   FormGroup,
-  Input,
-  InputLabel,
-  styled
+  styled,
+  TextField
 } from '@mui/material'
 import ApiAddUser from '../Api/ApiAddUser'
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const FormStyledContainer = styled(FormGroup)`
   width : 50%;
@@ -17,7 +17,7 @@ const FormStyledContainer = styled(FormGroup)`
   }
 `
 const initialValues = {
-  name :'',
+  name : '',
   username : '',
   email : '',
   phone : '',
@@ -26,41 +26,53 @@ const initialValues = {
 const AddUser = () => {
 
   const [user, setUser] = React.useState(initialValues)
+  const navigate = useNavigate()
   const handleValueChange = (e) => {
     setUser({ ...user, [e.target.name] : e.target.value})
     console.log(user)
   }
+
   const handleValueOnClick = async () => {
     await ApiAddUser(user)
+    navigate('/allusers')
   }
+
   return (
       <FormStyledContainer>
         <FormControl>
-          <InputLabel>Name</InputLabel>
-          <Input
+          <TextField
+            id="standard-basic"
+            label="Name"
             name='name'
+            variant="standard"
             onChange = { (e) => handleValueChange(e) }
           />
         </FormControl>
         <FormControl>
-          <InputLabel>Username</InputLabel>
-            <Input
-              name='username'
-              onChange = { (e) => handleValueChange(e) }
+          <TextField
+            id="standard-basic"
+            label="Username"
+            name='username'
+            variant="standard"
+            onChange = { (e) => handleValueChange(e) }
           />
         </FormControl>
         <FormControl>
-          <InputLabel>Email</InputLabel>
-            <Input
-              name='email'
-              onChange = { (e) => handleValueChange(e) }
-          />
+          <TextField
+            id="standard-basic"
+            label="Email"
+            name='email'
+            variant="standard"
+            onChange = { (e) => handleValueChange(e) }
+          />    
         </FormControl>
         <FormControl>
-          <InputLabel>Phone</InputLabel>
-            <Input
-              name='phone'
-              onChange = { (e) => handleValueChange(e) }
+          <TextField
+            id="standard-basic"
+            label="Phone"
+            name='phone'
+            variant="standard"
+            onChange = { (e) => handleValueChange(e) }
           />
         </FormControl>
         <FormControl>
