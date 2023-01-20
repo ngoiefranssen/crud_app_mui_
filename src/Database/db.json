@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "name": "Sharma",
-      "username": "Julia",
-      "email": "Sharma@gmail.com",
-      "phone": "758720171",
-      "id": 1
-    },
-    {
       "name": "Ngoie",
       "username": "Franssen",
       "email": "ngoie@gmail.com",
@@ -43,7 +36,7 @@
       "id": 6
     },
     {
-      "name": "Julian",
+      "name": "Julianno",
       "username": "Julia",
       "email": "julcas@gmail.com",
       "phone": "25559687",

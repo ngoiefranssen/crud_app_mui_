@@ -74,7 +74,7 @@ const AllUser = () => {
   }
 
   return (
-    <Box sx={{ width: '57%', margin : '50px auto 0 auto' }}>
+    <Box sx={{ width: '55%', margin : '50px auto 0 auto' }}>
       <Link 
         to='/adduser'
         sx={{ 
@@ -117,15 +117,17 @@ const AllUser = () => {
                   >
                       <EditIcon/>
                   </Button>
-                  <Button
+                  {/* <Button
                   >
                     <RemoveRedEyeIcon />
-                  </Button>
+                  </Button> */}
                   <Button
-                    variant='contained'
+                    // variant='contained'
                     color='error'
                     onClick={ () => handleValueDeleteData(user.id) }
-                  ><RemoveIcon/></Button>
+                  >
+                    <RemoveIcon/>
+                  </Button>
                 </TableCell>
               </TableRow>
             ))
