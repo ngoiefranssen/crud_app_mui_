@@ -1,6 +1,6 @@
 import Header from '../Components/Header'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import CdIntervieuw from '../Components/CdIntervieuw'
+import IconMaterial from '../Components/IconMaterial'
 import AllUser from '../Components/AllUser'
 import AddUser from '../Components/AddUser'
 import './App.css';
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path='/' element={<CdIntervieuw />} />
+        <Route path='/' element={<IconMaterial />} />
         <Route path='/allusers' element={<AllUser />} />
         <Route path='/adduser' element={<AddUser />} />
         <Route path='/edituser/:id' element={<EditUser />} />
