@@ -2,7 +2,7 @@
   "users": [
     {
       "name": "Sharma",
-      "username": "Julianno",
+      "username": "Julia",
       "email": "Sharma@gmail.com",
       "phone": "758720171",
       "id": 1
@@ -27,6 +27,34 @@
       "email": "cassandra@gmail.com",
       "phone": "927965821",
       "id": 4
+    },
+    {
+      "name": "beeta",
+      "username": "jieeie",
+      "email": "jejeueu@gmail.com",
+      "phone": "125566998",
+      "id": 5
+    },
+    {
+      "name": "rofup",
+      "username": "buvubuqeb",
+      "email": "neqab@gmail.com",
+      "phone": "122365588",
+      "id": 6
+    },
+    {
+      "name": "Julian",
+      "username": "Julia",
+      "email": "julcas@gmail.com",
+      "phone": "25559687",
+      "id": 7
+    },
+    {
+      "name": "jean",
+      "username": "jeanno",
+      "email": "jeanno@gmail.com",
+      "phone": "2558996324",
+      "id": 8
     }
   ]
 }

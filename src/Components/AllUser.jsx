@@ -6,6 +6,7 @@ import {
   TableBody,
   TableCell,
   TableHead,
+  TablePagination,
   TableRow
 } from '@mui/material'
 import ApiGetUsers from '../Api/ApiGetUsers'
@@ -13,7 +14,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import EditIcon from '@mui/icons-material/Edit'
 import RemoveIcon from '@mui/icons-material/Remove'
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye'
 import deleteUser from '../Api/deleteUser'
 
 const useStyledTable = styled(Table)`
@@ -28,7 +29,6 @@ const useStyledThead = styled(TableRow)`
     font-size: 20px;
   }
 `
-
 //Styled TableRow for the TableBoby
 const useStyledTableBoby = styled(TableRow)`
   & > th {
@@ -45,6 +45,21 @@ const useStyledTableBoby = styled(TableRow)`
 const AllUser = () => {
 
   const [users, setUsers] = React.useState([])
+  const [page, setPage] =React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(10)
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage)
+  }
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10))
+    setPage(0)
+  }
+
+  const emptyRows =
+    rowsPerPage - Math.min(rowsPerPage, users.length - page * rowsPerPage)
+
   React.useEffect(() =>{
     getUserFetch();
   },[]);
@@ -85,8 +100,10 @@ const AllUser = () => {
         </TableHead>
         <TableBody>
           {
-            users?.map((user) =>(
-              <TableRow>
+            users
+            .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+            .map((user, index) =>(
+              <TableRow key={user?.id}>
                 <TableCell align="left" key={user.id}>{user.id}</TableCell>
                 <TableCell align="left">{user.name}</TableCell>
                 <TableCell align="left">{user.username}</TableCell>
@@ -113,9 +130,26 @@ const AllUser = () => {
               </TableRow>
             ))
           }
-          
+
+        {
+          emptyRows > 0 && (
+            <TableRow style={{ height: 53 * emptyRows }}>
+            {/* // <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}> */}
+              <TableCell colSpan={6} />
+            </TableRow>
+          )
+        }
         </TableBody>
       </useStyledTable>
+      <TablePagination
+        component='div'
+        page = {page}
+        rowsPerPageOptions = {[5, 10, 25]}
+        rowsPerPage = {rowsPerPage}
+        count = {users.length}
+        onPageChange = {handleChangePage}
+        onRowsPerPageChange = {handleChangeRowsPerPage}
+       />
     </Box>
   )
 }
